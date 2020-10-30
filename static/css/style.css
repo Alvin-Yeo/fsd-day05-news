@@ -1,0 +1,28 @@
+.container {
+    max-width: 800px;
+}
+
+header .container {
+    max-width: 450px;
+    text-align: center;
+}
+
+.custom-control-label img {
+    width: 50%;
+    height: 50%;
+}
+
+.result-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.news img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.info {
+    width: 100%;
+}

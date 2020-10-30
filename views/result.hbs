@@ -1,0 +1,33 @@
+<main>
+    <div class="container">
+        <hr>
+        <div class="row mt-3">
+            <div class="col">
+                <p class="result-title lead">Search Results of "{{ keyword }}"</p>
+            </div>
+        </div>
+        {{#if hasContent}}
+            {{#each newsArr}}
+            <div class="rol m-3 p-3 border-bottom border-secondary">
+                <div class="col">
+                    <article class="news d-flex flex-column align-items-center">
+                        <h5>{{ this.title }}</h5>
+                        <img src="{{ this.img }}" alt="image" class="mt-1">
+                        <p class="mt-2">{{ this.summary }}</p>
+                        <div class="info d-flex flex-row justify-content-between">
+                            <span><small>{{ this.datetime }}</small></span>
+                            <a href="{{ this.link }}" target="_blank">Read</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            {{/each}}
+        {{else}}
+            <div class="rol mt-3">
+                <div class="col">
+                    <p class="result-title lead">No result found.</p>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</main>
